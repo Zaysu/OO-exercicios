@@ -2,10 +2,8 @@ import carro
 
 mustant = carro.Carro("Vermelho", 4, "Flex", 2.0, 0, False, 50)
 mustant.ligar()
-mustant.abastecer()
+mustant.abastecer(10)
 print(f"A quantidade de combusivel desse carro: {mustant.qtd_combustivel}")
-
-
 
 
 porshe = carro.Carro("verde", 2, "Flex", 2.0, 0, False, 50)

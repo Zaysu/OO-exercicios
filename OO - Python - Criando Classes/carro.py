@@ -4,12 +4,15 @@ class Carro():
         self.qtd_portas = qtd_portas
         self.tipo_combustivel = tipo_combustivel
         self.potencia = potencia
-        self.qtd_combustivel = qtd_combustivel
-        self.is_ligado = is_ligado
-        self.velocidade = velocidade
+        self.qtd_combustivel = 0
+        self.is_ligado = False
+        self.velocidade = 0
         
-    def abastecer(self):
-        self.qtd_combustivel += 20
+    def __del__(self):
+        print("obj removido da memoria")
+        
+    def abastecer(self, qtd_combustivel):
+        self.qtd_combustivel += qtd_combustivel
         
     def ligar(self):
         if self.is_ligado:
